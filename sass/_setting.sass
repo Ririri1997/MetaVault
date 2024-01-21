@@ -2,19 +2,33 @@
  box-sizing: border-box
 body 
  font-family: 'Inter', sans-serif
+ color: #FEF7DB
+.bg
  background: url(../img/bg-main.jpg) no-repeat top center #070911
  background-attachment: fixed
  background-size: cover 
- color: #FEF7DB
-
+ height: 100%
+ width: 100%    
+ position: fixed
+ z-index: -1
+ -webkit-background-size: cover
+ -o-background-size: cover
+ -moz-background-size: cover
+ transform: translate3d(0, 0, 0)
+ &-ios
+  height: 100svh
+  width: 100%    
+  background-color: transparent
+  z-index: -1
+  position: fixed
 .container 
- display: flex
  max-width: 1218px
  margin: auto
  width: 90%
 section 
  margin-bottom: 150px
 h2 
+ text-align: center
  font-feature-settings: 'clig' off, 'liga' off
  font-family: 'Graduate', serif
  font-size: 80px
@@ -23,7 +37,7 @@ h2
  line-height: 100%
  margin: 0
  padding: 0
- background-image: linear-gradient(87deg, #E184F0 0%, #CB54DE 100%)
+ background-image: linear-gradient(87deg, #E184F0 100%, #CB54DE 100%)
  -webkit-background-clip: text
  -webkit-text-fill-color: transparent
  margin-bottom: 70px
@@ -51,11 +65,12 @@ p
  line-height: 140%
  margin: 0
  padding: 0
+ text-align: center
 .p-light 
  color: #C4D4E2
 .button
  display: flex
- padding: 16px 32px
+ padding: 12px 32px
  justify-content: center
  align-items: center
  text-decoration: none
